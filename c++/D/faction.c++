@@ -10,13 +10,11 @@ int main(){
     int x, y;
     cin >> x >> y;
     data.at(x - 1).at(y - 1) = 1;
-    data.at(y - 1).at(x - 1) = 1;
   }
   
   int ans = 0;
   for (int bit = 0; bit < (1 << N); bit++) {
     bool not_faction = 0;
-    cout << not_faction << endl;
     vector<int> faction;
     for (int i = 0; i < N; i++) {
       if (bit & (1 << i)) faction.push_back(i);
